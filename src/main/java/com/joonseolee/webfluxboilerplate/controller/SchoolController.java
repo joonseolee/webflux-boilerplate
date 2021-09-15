@@ -13,8 +13,8 @@ public class SchoolController {
     private final SchoolService schoolService;
 
     @GetMapping("/schools/{id}")
-    public Mono<School> findSchoolById(@PathVariable("id") Mono<Long> id) {
-        return schoolService.findById(id);
+    public Mono<School> findSchoolById(@PathVariable("id") Long id) {
+        return schoolService.findById(Mono.just(id));
     }
 
     @PostMapping("/schools")
