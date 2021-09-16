@@ -24,6 +24,12 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc'
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
     implementation 'org.flywaydb:flyway-core'
+    // https://mvnrepository.com/artifact/com.querydsl/querydsl-jpa
+    implementation group: 'com.querydsl', name: 'querydsl-jpa', version: '4.4.0'
+
+    // https://mvnrepository.com/artifact/com.querydsl/querydsl-apt
+    implementation group: 'com.querydsl', name: 'querydsl-apt', version: '4.4.0'
+
     compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'com.h2database:h2'
     runtimeOnly 'io.r2dbc:r2dbc-h2'
