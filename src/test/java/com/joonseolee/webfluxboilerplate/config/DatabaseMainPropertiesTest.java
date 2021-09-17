@@ -1,5 +1,6 @@
 package com.joonseolee.webfluxboilerplate.config;
 
+import com.joonseolee.webfluxboilerplate.config.database.DatabaseMainProperties;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

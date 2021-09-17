@@ -1,4 +1,4 @@
-package com.joonseolee.webfluxboilerplate.config;
+package com.joonseolee.webfluxboilerplate.config.database;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -28,6 +28,8 @@ public final class DatabaseMainProperties {
     @Setter
     @Component
     public static final class DatabaseConfigurationProperties {
+        @NotEmpty
+        private String driverClassName;
         @NotEmpty
         private String url;
         @NotEmpty
