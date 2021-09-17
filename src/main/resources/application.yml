@@ -1,0 +1,11 @@
+datasource:
+  main:
+    master:
+      url: jdbc:mysql://localhost:3306/master?serverTimezone=Asia/Seoul
+      username: root
+      password: password
+    slaves:
+      -
+        url: jdbc:mysql://localhost:3306/slave?serverTimezone=Asia/Seoul
+        username: root
+        password: password
