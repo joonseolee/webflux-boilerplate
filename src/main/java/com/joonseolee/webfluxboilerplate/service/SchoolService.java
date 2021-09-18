@@ -4,6 +4,7 @@ import com.joonseolee.webfluxboilerplate.entity.School;
 import com.joonseolee.webfluxboilerplate.repository.SchoolJpaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import reactor.core.publisher.Mono;
 
 
@@ -19,6 +20,7 @@ public class SchoolService {
                 .switchIfEmpty(Mono.empty());
     }
 
+//    @Transactional(readOnly = false)
     public Mono<School> findById(Mono<Long> id) {
         return id
                 .flatMap(schoolJpaRepository::getSchoolById);

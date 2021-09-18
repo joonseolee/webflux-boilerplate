@@ -1,13 +1,11 @@
 datasource:
   main:
     master:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/master?serverTimezone=Asia/Seoul
+      url: r2dbc:pool:mysql://localhost:3306/demo?serverTimezone=Asia/Seoul
       username: root
       password: password
     slaves:
       -
-        driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://localhost:3306/slave?serverTimezone=Asia/Seoul
+        url: r2dbc:pool:mysql://localhost:3306/demo?serverTimezone=Asia/Seoul
         username: root
         password: password

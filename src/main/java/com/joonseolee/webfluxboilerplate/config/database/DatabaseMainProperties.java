@@ -29,8 +29,6 @@ public final class DatabaseMainProperties {
     @Component
     public static final class DatabaseConfigurationProperties {
         @NotEmpty
-        private String driverClassName;
-        @NotEmpty
         private String url;
         @NotEmpty
         private String username;
