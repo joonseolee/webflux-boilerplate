@@ -6,6 +6,6 @@ datasource:
       password: password
     slaves:
       -
-        url: r2dbc:pool:mysql://localhost:3306/demo?serverTimezone=Asia/Seoul
+        url: r2dbc:pool:mysql://localhost:3307/demo?serverTimezone=Asia/Seoul
         username: root
         password: password
