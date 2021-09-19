@@ -2,7 +2,6 @@ package com.joonseolee.webfluxboilerplate.config.database;
 
 import io.r2dbc.spi.ConnectionFactory;
 import lombok.RequiredArgsConstructor;
-import org.hibernate.internal.util.config.ConfigurationException;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.r2dbc.ConnectionFactoryBuilder;
 import org.springframework.context.annotation.Bean;
@@ -46,7 +45,7 @@ public class DatabaseMainConfiguration {
         var slave = databaseMainProperties.getSlaves()
                 .stream()
                 .findFirst()
-                .orElseThrow(() -> new ConfigurationException("main slave datasource is an empty."));
+                .orElseThrow(() -> new RuntimeException("main slave datasource is an empty."));
 
         return ConnectionFactoryBuilder
                 .withUrl(slave.getUrl())
@@ -68,6 +67,7 @@ public class DatabaseMainConfiguration {
 
         return mainConnectionFactory;
     }
+
 
     @Bean
     public R2dbcEntityOperations mainEntityTemplate(

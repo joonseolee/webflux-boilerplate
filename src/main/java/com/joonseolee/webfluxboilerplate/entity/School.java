@@ -1,22 +1,19 @@
 package com.joonseolee.webfluxboilerplate.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.data.relational.core.mapping.Table;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-
-
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
 @Getter
-@Entity(name = "school")
 @Table
 public class School {
 
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name")
     private String name;
 }

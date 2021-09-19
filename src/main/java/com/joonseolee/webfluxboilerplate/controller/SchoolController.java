@@ -14,7 +14,7 @@ public class SchoolController {
 
     @GetMapping("/schools/{id}")
     public Mono<School> findSchoolById(@PathVariable("id") Long id) {
-        return schoolService.findById(Mono.just(id));
+        return schoolService.findById(id);
     }
 
     @PostMapping("/schools")

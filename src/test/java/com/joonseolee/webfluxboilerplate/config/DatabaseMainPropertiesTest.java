@@ -22,7 +22,7 @@ class DatabaseMainPropertiesTest {
         var master = databaseMainProperties.getMaster();
         var slaves = databaseMainProperties.getSlaves();
 
-        assertThat(master.getUrl(), is("jdbc:mysql://localhost:3306/master?serverTimezone=Asia/Seoul"));
-        assertThat(slaves.get(0).getUrl(), is("jdbc:mysql://localhost:3306/slave?serverTimezone=Asia/Seoul"));
+        assertThat(master.getUrl(), is("r2dbc:pool:mysql://localhost:3306/demo?serverTimezone=Asia/Seoul"));
+        assertThat(slaves.get(0).getUrl(), is("r2dbc:pool:mysql://localhost:3307/demo?serverTimezone=Asia/Seoul"));
     }
 }
